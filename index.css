@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    transition: .8s;
 }
 
 
@@ -22,7 +23,7 @@ img {
 #container {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 5vh 5vh darkslateblue;
+    box-shadow: 0 0 1.5vh 1.5vh darkslateblue;
     
     padding: 2vh;
     
@@ -53,8 +54,9 @@ p {
 p > strong {
     opacity: 1;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-fill-color: blueviolet;
+    
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: black;
 }
 
 input,
@@ -91,7 +93,7 @@ button:active {
 }
 
 #resposta {
-    margin-top: 32px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,15 +105,4 @@ button:active {
     opacity: 0.9;
     margin-bottom: 8px;
     
-}
-
-.alerta {
-    border-radius: 8px;
-    color: rgb(182, 0, 0);
-    padding: 8px;
-    width: 50%;
-    background-color: goldenrod;
-    /* font-weight: 300; */
-    /* font-size:8px; */
-    transition: .8s;
 }

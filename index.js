@@ -23,7 +23,7 @@ const respostas = [
     'Concentre-se e pergunte novamente.',
     'Sinais apontam que sim.'
 ]
-const alerta = '<div class="alerta">Digite sua pergunta.</div>'
+const alerta = '<div id="alerta" align="center" style="background-color:goldenrod; border-radius: 8px; color: rgb(182, 0, 0); padding: 4px;">Digite sua pergunta.</div>'
 /* ------------------------------------------------------ */
 
 const divResposta = document.getElementById('resposta')
@@ -36,14 +36,20 @@ botaoPerguntar.onclick = emitirAlerta
 
 //se pergunta vaiza:
 function emitirAlerta() {
-    inputPergunta.value == "" ? divResposta.innerHTML += alerta : perguntar()
+    if (inputPergunta.value == "") {
+        inputPergunta.style.border = "4px double red"
+        inputPergunta.focus()
+        divResposta.innerHTML += alerta
+    } else {
+        perguntar()
+    }
+    // inputPergunta.value == "" ? divResposta.innerHTML += alerta : perguntar()
 }
 
 // clicar em fazer pergunta
 function perguntar() {
-    console.log(divResposta.value)
-    console.log(typeof(divResposta.value))
 
+    //verificar se alerta está contido em div resposta e remove-lo
     const stringPergunta = toString(divResposta.value)
     
     console.log(stringPergunta)    
