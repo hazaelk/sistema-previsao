@@ -1,9 +1,8 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    transition: .8s;
+    transition: 1s;
 }
-
 
 body {
     background-color: rgb(20, 20, 20);
@@ -24,14 +23,14 @@ img {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: 0 0 1.5vh 1.5vh darkslateblue;
-    
+
     padding: 2vh;
-    
+
     max-width: 400px;
     max-height: 100vh;
 
     width: auto;
-    height: auto;
+    height: 95vh;
 
     margin: 3vh;
 
@@ -54,7 +53,7 @@ p {
 p > strong {
     opacity: 1;
     -webkit-text-stroke-width: 1px;
-    
+
     -webkit-text-fill-color: black;
     -webkit-text-stroke: black;
 }
@@ -97,6 +96,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 1s;
 }
 
 #resposta div {
@@ -104,5 +104,4 @@ button:active {
     font-weight: normal;
     opacity: 0.9;
     margin-bottom: 8px;
-    
 }
